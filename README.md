@@ -15,7 +15,7 @@ README.md       ← project notes
 1) Index.html contains website contents/structure , headers, text, images, etc.. *what visitor sees*
 2) Styles.css is for the visual appearance, colors, fonts, spacing, layouts, animations
 3) script.js is for controlling behaviour and interactions for example contanct forms/submission forms or "☰ Menu" (or similar) button on page.
-4) Within Index.htmkl we have a contentreference that will point to the Email Service (formspree/EmailJS)
+4) Within Index.htmkl we have a {contentreference} that will point to the Email Service (formspree/EmailJS)
 
 ## Deployment (Vercel)
 1. Push project to GitHub
