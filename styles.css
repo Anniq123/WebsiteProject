@@ -2,49 +2,47 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #0a0a0a;
+  background: #0b0b0b;
   color: white;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 /* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  background: #111;
+  padding: 20px 60px;
+  border-bottom: 1px solid #222;
   position: sticky;
   top: 0;
-  z-index: 1000;
-  border-bottom: 2px solid orange;
+  background: #0b0b0b;
+  z-index: 10;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo-box {
-  background: orange;
-  color: black;
-  padding: 10px;
-  font-weight: bold;
-}
-
-nav a {
-  color: white;
-  margin-left: 20px;
+.navbar nav a {
+  margin: 0 15px;
+  color: #aaa;
   text-decoration: none;
 }
 
-nav a:hover {
+.navbar nav a:hover {
+  color: white;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.nav-btn {
+  border: 1px solid orange;
+  padding: 8px 16px;
   color: orange;
+  text-decoration: none;
 }
 
 /* HERO */
@@ -52,42 +50,36 @@ nav a:hover {
   height: 90vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  padding: 0 80px;
   background: url('https://picsum.photos/1600/900?landscape') center/cover;
-  position: relative;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
 }
 
 .hero-content {
-  position: relative;
-  z-index: 1;
+  max-width: 650px;
 }
 
 .hero h1 {
-  font-size: 50px;
-  color: orange;
+  font-size: 60px;
+  line-height: 1.1;
+}
+
+.hero p {
+  margin-top: 20px;
+  color: #ccc;
 }
 
 .btn {
   display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
+  margin-top: 25px;
   background: orange;
   color: black;
+  padding: 12px 24px;
   text-decoration: none;
 }
 
 /* SECTIONS */
 .section {
-  padding: 80px 20px;
-  text-align: center;
+  padding: 100px 80px;
 }
 
 .dark {
@@ -95,45 +87,31 @@ nav a:hover {
 }
 
 h2 {
-  color: orange;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-/* SERVICES */
+/* GRID */
 .grid {
   display: flex;
-  justify-content: center;
   gap: 20px;
+  justify-content: center;
 }
 
 .card {
   background: #1a1a1a;
-  padding: 20px;
-  width: 250px;
-  border: 1px solid #333;
+  padding: 25px;
+  width: 260px;
 }
 
 .highlight {
   border: 2px solid orange;
 }
 
-/* GALLERY */
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
-
-.gallery img {
-  width: 250px;
-  border: 2px solid orange;
-}
-
-/* REVIEWS */
-.review {
-  margin: 10px;
-  font-style: italic;
+/* PROJECTS */
+.img {
+  flex: 1;
+  height: 220px;
+  background: url('https://picsum.photos/400/300') center/cover;
 }
 
 /* FORM */
@@ -144,22 +122,23 @@ form {
 }
 
 input, textarea {
-  width: 300px;
+  width: 320px;
   padding: 10px;
   margin: 10px;
+  background: #111;
+  border: 1px solid #333;
+  color: white;
 }
 
 button {
   background: orange;
-  border: none;
   padding: 10px 20px;
-  cursor: pointer;
+  border: none;
 }
 
 /* FOOTER */
 footer {
-  padding: 20px;
   text-align: center;
-  background: #000;
-  border-top: 1px solid orange;
+  padding: 20px;
+  border-top: 1px solid #222;
 }
